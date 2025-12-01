@@ -1,0 +1,14 @@
+{
+  "name": "topic1_js_es6_review",
+  "version": "1.0.0",
+  "description": "Review JS ES6",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "es6"
+  ],
+  "author": "FPTU",
+  "license": "ISC"
+}
