@@ -12,6 +12,16 @@ app.get('/', async(req, resp) => {
     resp.status(200).json({message: 'Welcome to Express Web server'});
 });
 
+// Books:
+app.use('/api/books', require('./routes/books.route'));
+
+// GET: /books -> get all book. Output: [{id,title,releaseYear,authors,publisher}]. authors: danh sách tên các tác giả. publisher: tên NXB
+
+// GET: /books/:id -> get a book by id. Output: {bookId, title, rYear, authors, publisher}
+
+// GET: /books/author/:author -> get all book by authorName -> Trả về mảng giống YC1
+
+
 // Kiểm soát các end-point không tồn tại
 app.use((req, resp, next)=>{ // hàm mũi tên này chính là 1 middleware dạng customize
     resp.status(500).json({error: "Sorry, that route doesn't exist. Have a nice day!"});
