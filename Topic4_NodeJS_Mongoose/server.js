@@ -12,6 +12,7 @@ app.get('/', async(req, res)=>{
 });
 
 app.use('/api/authors', require('./routes/author.route'));
+app.use('/api/books', require('./routes/book.route'));
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
